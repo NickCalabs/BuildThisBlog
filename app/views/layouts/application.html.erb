@@ -6,9 +6,11 @@
 	<meta charset="urf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+	<% if false %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 	 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<% end %>
 
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "vendor/modernizr" %>
@@ -46,6 +48,7 @@
 	<% end %>
 
 	<div id="main_content">
+		<% if false %>
 		<div id="header">
 			<% if current_page?(root_path) %>
 				<p>All Posts</p>
@@ -62,6 +65,19 @@
 				</div>
 			<% end %>
 		</div>
+		<% end %>
+
+		<div class="row">
+        <div class="large-12 columns">
+          <h1 clas="left">Nick Calabro</h1>
+           <ul class="inline-list right">
+             <li><a href="#">Link 1</a></li>
+             <li><a href="#">Link 2</a></li>
+             <li><a href="#">Link 3</a></li>
+             <li><a href="#">Link 4</a></li>
+           </ul>
+        </div>
+    </div>
 
 		<% flash.each do |name, msg| %>
 			<%= content_tag(:div, msg, class: "alert") %>
@@ -71,4 +87,24 @@
 		
 	</div>
 </body>
+
+	<footer class="row">
+        <div class="large-12 columns">
+          <hr/>
+          <div class="row">
+            <div class="large-6 columns">
+              <p>&#169; Nick</p>
+            </div>
+            <div class="large-6 columns">
+              <ul class="inline-list right">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+   </footer>
+
 </html>

@@ -1,6 +1,17 @@
+<div class="row text-center">
+	<h5>Hi, this is my blog. Thanks.</h5><br>
+</div>
+
+<div class="row">
+	<div class="large-9 small-centered columns">
+		<h2 class="recent">Recent Posts</h2>
+	</div>
+</div>
 <% @posts.each do |post| %>
-	<div class="post_wrapper">
-		<h2 class="title"><%= link_to post.title, post%></h2>
-		<p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+	<div class="row">
+		<div class="large-9 small-centered columns">
+			<h2 class="title"><%= link_to post.title, post%></h2>
+			<p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+		</div>
 	</div>
 <% end %>
