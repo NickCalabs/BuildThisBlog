@@ -66,18 +66,24 @@
 			<% end %>
 		</div>
 		<% end %>
+			
+			<nav class="top-bar" data-topbar role="navigation">
+	        <ul class="title-area">
+	          <li class="name">
+	              
+	            <h1><a href="#">Nick Calabro</a></h1>
+	          </li>
+	          <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+	        </ul>
 
-		<div class="row">
-        <div class="large-12 columns">
-          <h1 clas="left">Nick Calabro</h1>
-           <ul class="inline-list right">
-             <li><a href="#">Link 1</a></li>
-             <li><a href="#">Link 2</a></li>
-             <li><a href="#">Link 3</a></li>
-             <li><a href="#">Link 4</a></li>
-           </ul>
-        </div>
-    </div>
+	        <section class="top-bar-section">
+	         
+	          <ul class="right">
+	            <li><a href="#">Home</a></li>
+	            <li><a href="#">About</a></li>
+	          </ul>
+	        </section>
+	    </nav>
 
 		<% flash.each do |name, msg| %>
 			<%= content_tag(:div, msg, class: "alert") %>
@@ -94,14 +100,6 @@
           <div class="row">
             <div class="large-6 columns">
               <p>&#169; Nick</p>
-            </div>
-            <div class="large-6 columns">
-              <ul class="inline-list right">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
             </div>
           </div>
         </div>
