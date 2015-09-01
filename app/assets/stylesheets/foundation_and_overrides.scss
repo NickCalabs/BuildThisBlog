@@ -1487,6 +1487,7 @@ $include-html-global-classes: $include-html-classes;
 
 
 $topbar-bg: white;
+$topbar-link-bg: white;
 $topbar-link-bg-hover: white;
 $topbar-link-color: black;
 $topbar-link-color-hover: black;
@@ -1502,12 +1503,8 @@ $topbar-menu-link-color-toggled: blue;
 
 $topbar-menu-icon-color: black;
 
+$topbar-menu-link-color: white;
 
-$small-range: (0em, 90em);
-$medium-range: (40.063em, 64em);
-$large-range: (64.063em, 90em);
-$xlarge-range: (90.063em, 120em);
-$xxlarge-range: (120.063em);
 
 
 
