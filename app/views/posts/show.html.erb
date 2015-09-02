@@ -1,19 +1,25 @@
 <div id="post_content">
-	<h1 class="title large-9 small-centered">
-		<%= @post.title %>
-	</h1>
+	<div class="row">
+		<div class="small-9 large-centered small-centered columns">
+		<h1 class="title">
+			<%= @post.title %>
+		</h1>
+	</div>
 
-	<p class="date large-9 small-centered">
-		Submitted <%= time_ago_in_words(@post.created_at) %> Ago
-		<% if user_signed_in? %>
-			| <%= link_to 'Edit', edit_post_path(@post) %>
-			| <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
-		<% end %>
-	</p>
+		<div class="small-9 large-centered small-centered columns"><p>
+			Submitted <%= time_ago_in_words(@post.created_at) %> Ago
+			<% if user_signed_in? %>
+				| <%= link_to 'Edit', edit_post_path(@post) %>
+				| <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+			<% end %>
+		</p></div>
 
-	<p class="body large-9 small-centered columns">
-		<%= markdown(@post.body) %>
-	</p>
+
+		<div class="small-9 large-centered small-centered columns"><p>
+			<%= markdown(@post.body) %>
+		</p>
+	</div>
+</div>
 
 	<% if false %>
 	<div id="comments">
