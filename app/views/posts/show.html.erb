@@ -1,9 +1,9 @@
 <div id="post_content">
-	<h1 class="title large-9 small-centered columns">
+	<h1 class="title large-9 small-centered">
 		<%= @post.title %>
 	</h1>
 
-	<p class="date large-9 small-centered columns">
+	<p class="date large-9 small-centered">
 		Submitted <%= time_ago_in_words(@post.created_at) %> Ago
 		<% if user_signed_in? %>
 			| <%= link_to 'Edit', edit_post_path(@post) %>
@@ -12,7 +12,7 @@
 	</p>
 
 	<p class="body large-9 small-centered columns">
-		<%= @post.body %>
+		<%= markdown(@post.body) %>
 	</p>
 
 	<% if false %>
