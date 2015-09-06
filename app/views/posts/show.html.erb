@@ -16,7 +16,7 @@
 
 
 		<div class="small-9 large-centered small-centered columns"><p>
-			<%= markdown(@post.body) %>
+			<%= raw @post.body %>
 		</p>
 	</div>
 </div>
@@ -30,5 +30,4 @@
 		<%= render "comments/form" %>
 	</div>
 	<% end %>
-
 </div>

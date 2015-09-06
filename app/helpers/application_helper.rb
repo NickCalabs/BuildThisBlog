@@ -4,7 +4,7 @@ class CodeRayify < Redcarpet::Render::HTML
     CodeRay.scan(code, language).div(
     	:wrap => nil,
     	:line_numbers => :table,
-    	:css => :style
+    	:css => :style,
     )
   end
 end

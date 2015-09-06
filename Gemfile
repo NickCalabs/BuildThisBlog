@@ -27,6 +27,11 @@ gem 'devise', '~> 3.4.0'
 
 gem 'foundation-rails'
 
+#bootstrap
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails', '~> 3.2.1.rc1'
+
 #for code styling
 gem 'redcarpet'
 gem 'coderay'
