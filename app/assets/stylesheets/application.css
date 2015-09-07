@@ -6,18 +6,5 @@
  *= require_tree .
 */
 
-.CodeRay
-{
-	width: 100%;
-	overflow-y: auto;
-	_overflow: auto;
-	margin: 0 0 1em;
-}
 
-#post_body {
-	height: 300px;
-}
 
-.language-css,.language-ruby {
-	border-style: none;
-}

@@ -1,33 +1,27 @@
-<div id="post_content">
-	<div class="row">
-		<div class="small-9 large-centered small-centered columns">
-		<h1 class="title">
-			<%= @post.title %>
-		</h1>
-	</div>
-
-		<div class="small-9 large-centered small-centered columns"><p>
+	<h1 class="title">
+		<%= @post.title %>
+	</h1>
+		<p>
 			Submitted <%= time_ago_in_words(@post.created_at) %> Ago
 			<% if user_signed_in? %>
 				| <%= link_to 'Edit', edit_post_path(@post) %>
 				| <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
 			<% end %>
-		</p></div>
-
-
-		<div class="small-9 large-centered small-centered columns"><p>
-			<%= raw @post.body %>
 		</p>
-	</div>
-</div>
+	<%= raw @post.body %>
+
 
 	<% if false %>
-	<div id="comments">
-		<h2><%= @post.comments.count %> Comments</h2>
-		<%= render @post.comments %>
+		<div id="comments">
+			<h2><%= @post.comments.count %> Comments</h2>
+			<%= render @post.comments %>
 
-		<h3>Add a comment:</h3>
-		<%= render "comments/form" %>
-	</div>
+			<h3>Add a comment:</h3>
+			<%= render "comments/form" %>
+		</div>
 	<% end %>
-</div>
+
+	<% #reload prismjs after page load to render properly %>
+	<script>$(document).on('ready page:load', function() {
+    Prism.highlightAll();
+	});</script>

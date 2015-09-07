@@ -1,20 +1,9 @@
-<div class="row">
-	<div class="large-9 small-centered columns">
-		<h5>Hi, I'm Nick. I am an iOS and Rails developer. I then wr
-			At nos hinc posthac, sitientis piros Afros. Curabitur est gravida et libero vitae dictum.ite about the things I create. </h5><br>
-	</div>
-</div>
 
-<div class="row">
-	<div class="large-9 small-centered columns">
-		<h2 class="recent">Recent Posts</h2>
-	</div>
-</div>
-<% @posts.each do |post| %>
-	<div class="row">
-		<div class="large-9 small-centered columns">
-			<h2 class="title"><%= link_to post.title, post%></h2>
-			<p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
-		</div>
-	</div>
-<% end %>
+	<h5>Hi, I'm Nick. I am an iOS and Rails developer. I then wr
+		At nos hinc posthac, sitientis piros Afros. Curabitur est gravida et libero vitae dictum.ite about the things I create. </h5><br>
+	<h2 class="recent">Recent Posts</h2>
+
+	<% @posts.each do |post| %>
+		<h3 class="title"><%= link_to post.title, post%></h3>
+		<div class="blurb"><span class="date"><%= post.created_at.strftime("%B %d, %Y") %></span> <%= post.blurb %></div><br>
+	<% end %>
