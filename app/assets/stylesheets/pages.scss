@@ -104,3 +104,32 @@ button:active{
 .recent{
 	color: #a3a3a3;
 }
+
+.social-links{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-link-item{
+  display: flex;
+  flex-flow: nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-link-item-site{
+  box-sizing: border-box;
+  font-weight: 600;
+  min-width: 9ex;
+  padding: 0 0.5rem 0 0;
+}
+
+.social-link-item-link{
+
+}
+
+footer p{
+  font-size: 16px;
+}

@@ -52,13 +52,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <h1><%= link_to "Nick Calabro", root_path, class: "navbar-brand" %></h1>
+          <h1><%= link_to "Build This Blog", root_path, class: "navbar-brand" %></h1>
         </div>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Articles", root_path  %></li>
-            <li class="<%= 'active' if params[:controller] == 'products' %>"><%= link_to "Twitter", "/path2"  %></li>
-            <li class="<%= 'active' if params[:controller] == 'about' %>"><%= link_to "About", about_path  %></li>
+            <li class="<%= 'active' if params[:controller] == 'products' %>"><%= link_to "Twitter", "http://twitter.com/nickcalabs"  %></li>
+            <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path  %></li>
           </ul>
         </div>
       </div>
@@ -73,7 +73,7 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2015</p>
+        <p>Nick Calabro<br>2015<br>New York</p>
       </footer>
 
     </div> <!-- /container -->
